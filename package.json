@@ -5,7 +5,7 @@
   "homepage": "https://ziyod.dev",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "node node_modules/react-scripts/scripts/build.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "serve": "serve -s build",
@@ -38,3 +38,4 @@
     "url": "git@github.com:daun1112/mybio.git"
   }
 }
+
