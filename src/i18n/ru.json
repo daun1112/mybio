@@ -1,0 +1,19 @@
+{
+  "fullName": "Полное имя",
+  "age": "Возраст",
+  "biography": "Краткая биография",
+  "contact": {
+    "title": "Контактные данные",
+    "email": "Электронная почта",
+    "phone": "Телефон"
+  },
+  "projects": {
+    "title": "Проекты",
+    "description": "Описание проекта",
+    "link": "Ссылка на проект"
+  },
+  "languageSwitcher": {
+    "switchToEnglish": "Переключиться на английский",
+    "switchToRussian": "Переключиться на русский"
+  }
+}

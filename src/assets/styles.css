@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@700&family=Fira+Mono:wght@400;700&display=swap');
+
+body {
+  background: #18141c;
+  color: #fff;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 480px;
+  margin: 40px auto;
+  background: rgba(30, 20, 40, 0.7);
+  border-radius: 24px;
+  box-shadow: 0 4px 32px 0 rgba(255,0,128,0.15);
+  padding: 32px 24px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+}
+
+/* Mobile-first tweaks */
+.container {
+  width: 92%;
+  max-width: 520px;
+  padding: 28px 18px;
+}
+
+h1, h2 {
+  color: #ff4fa3;
+  margin-bottom: 8px;
+}
+
+.profile-picture {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+/* ensure avatar stays above flipping element */
+.profile-picture { position: relative; z-index: 5; }
+
+.profile-picture img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 3px solid #ff4fa3;
+  box-shadow: 0 2px 16px 0 rgba(255,0,128,0.2);
+  background: #18141c;
+}
+
+/* Mobile-first tweaks */
+.profile-picture img {
+  width: 96px;
+  height: 96px;
+}
+
+.section {
+  margin-bottom: 18px;
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-info li {
+  margin-bottom: 6px;
+}
+
+.project {
+  margin-bottom: 8px;
+}
+
+.project a {
+  color: #ff4fa3;
+  font-weight: 600;
+  text-decoration: none;
+  background: rgba(255,79,163,0.08);
+  padding: 2px 10px;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.project a:hover {
+  background: rgba(255,79,163,0.18);
+}
+
+.language-switcher {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.language-switcher button {
+    background-color: transparent;
+    border: 1px solid #ff69b4; /* Pink accent */
+    color: #ff69b4; /* Pink accent */
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.language-switcher button:hover {
+    background-color: #ff69b4; /* Pink accent */
+    color: #ffffff;
+}
+
+.profile-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+/* Buttons: full width on small screens */
+.profile-buttons .profile-btn {
+  min-width: 100%;
+  max-width: 360px;
+  padding: 10px 14px;
+  box-sizing: border-box;
+}
+
+.profile-btn {
+  padding: 10px 0;
+  border: none;
+  border-radius: 18px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background: #23202a;
+  box-shadow: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 
+    background 0.25s cubic-bezier(.4,0,.2,1),
+    color 0.25s cubic-bezier(.4,0,.2,1),
+    transform 0.15s cubic-bezier(.4,0,.2,1),
+    box-shadow 0.25s cubic-bezier(.4,0,.2,1);
+  outline: none;
+  min-width: 220px;
+  text-align: center;
+  margin: 0;
+  display: block;
+  letter-spacing: 0.02em;
+}
+
+.profile-btn.tg-btn {
+  background: #23202a;
+  border: 1.5px solid #0088cc;
+  color: #0088cc;
+}
+
+.profile-btn.phone-btn {
+  background: #23202a;
+  border: 1.5px solid #ffb86c;
+  color: #ffb86c;
+}
+
+.profile-btn.email-btn {
+  background: #23202a;
+  border: 1.5px solid #6c63ff;
+  color: #6c63ff;
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+  font-size: 1.08rem;
+  letter-spacing: 0.5px;
+}
+
+.profile-btn:hover, .profile-btn:focus {
+  background: #18141c;
+  color: #fff;
+  box-shadow: 0 4px 24px 0 rgba(108,99,255,0.10);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.profile-btn:active {
+  background: #18141c;
+  color: #fff;
+  box-shadow: 0 2px 8px 0 rgba(108,99,255,0.08);
+  transform: translateY(1px) scale(0.98);
+}
+
+.email-text {
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+  font-size: 1.08rem;
+  letter-spacing: 0.5px;
+}
+
+.profile-name {
+  position: relative;
+  min-height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ffe0fa;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+/* Mobile-first tweaks */
+.profile-name { font-size: 1.8rem; }
+
+.profile-age {
+  font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #a6baff; /* светло-голубой, хорошо читается и отличается */
+  margin-bottom: 18px;
+}
+
+/* Mobile-first tweaks */
+.profile-age { font-size: 1rem; }
+
+.profile-bio {
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+  font-size: 1.05rem;
+  color: #d6caff;           /* светло-лавандовый, чуть теплее и ярче */
+  background: rgba(80, 60, 120, 0.22);
+  border-radius: 12px;
+  padding: 16px 14px;
+  margin-bottom: 22px;
+  line-height: 1.6;
+  word-break: break-word;
+  box-shadow: 0 0 16px #bdbdfc22;
+  border-left: 3px solid #bdbdfc;
+  border-right: 3px solid #bdbdfc11;
+  transition: background 0.2s;
+}
+
+/* Mobile-first tweaks */
+.profile-bio { font-size: 0.98rem; padding: 12px 10px; }
+
+.nickname-anim {
+  position: relative;
+  display: inline-block;
+  min-height: 2.2em;
+  transition: color 0.3s cubic-bezier(.4,0,.2,1), text-shadow 0.3s cubic-bezier(.4,0,.2,1);
+  color: #ffe0fa;
+  text-shadow: 0 0 0px #ff4fa3;
+  overflow: hidden;
+}
+
+.nickname-text,
+.realname-text {
+  position: absolute;
+  left: 0; right: 0;
+  width: 100%;
+  display: block;
+  text-align: center;
+  transition:
+    opacity 0.5s cubic-bezier(.4,0,.2,1),
+    filter 0.5s cubic-bezier(.4,0,.2,1),
+    transform 0.5s cubic-bezier(.4,0,.2,1),
+    text-shadow 0.5s cubic-bezier(.4,0,.2,1);
+  will-change: opacity, filter, transform;
+  pointer-events: none;
+}
+
+.nickname-text.show {
+  opacity: 1;
+  filter: blur(0px);
+  transform: scale(1) translateY(0);
+  color: #7fdfff;
+  text-shadow: 0 0 8px #7fdfff99;
+  z-index: 2;
+}
+
+.nickname-text.hide {
+  opacity: 0;
+  filter: blur(8px);
+  transform: scale(0.8) translateY(-30%);
+  text-shadow: none;
+  z-index: 1;
+}
+
+.realname-text.show {
+  opacity: 1;
+  filter: blur(0px);
+  transform: scale(1) translateY(0);
+  color: #ffe0fa;
+  text-shadow: 0 0 24px #ff4fa3cc, 0 0 2px #fff;
+  animation: revealName 0.7s cubic-bezier(.4,0,.2,1);
+  z-index: 2;
+}
+
+.realname-text.hide {
+  opacity: 0;
+  filter: blur(8px);
+  transform: scale(1.2) translateY(30%);
+  text-shadow: none;
+  z-index: 1;
+}
+
+@keyframes revealName {
+  0% {
+    opacity: 0;
+    filter: blur(12px);
+    transform: scale(1.2) translateY(30%);
+    text-shadow: 0 0 0px #ff4fa3;
+  }
+  60% {
+    opacity: 1;
+    filter: blur(2px);
+    transform: scale(1.05) translateY(-5%);
+    text-shadow: 0 0 32px #ff4fa3cc;
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: scale(1) translateY(0);
+    text-shadow: 0 0 24px #ff4fa3cc, 0 0 2px #fff;
+  }
+}
+
+/* flip - horizontal (Y axis) and sized to content (occupies nickname place) */
+.flip-root {
+  perspective: 900px;
+  -webkit-tap-highlight-color: transparent;
+  display: block;            /* занимает свою ширину и центрируется */
+  width: max-content;
+  margin: 0 auto;
+}
+
+.flip-inner {
+  display: block;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.65s cubic-bezier(.2,.9,.2,1);
+  transform-origin: center center;
+  will-change: transform;
+  padding: 0 6px;
+  height: 1em;               /* чтобы высота соответствовала тексту */
+}
+
+/* лица флипа позиционируем относительно центра, не растягивая по ширине контейнера */
+.flip-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  text-align: center;
+  padding: 0;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+  font-size: 2.2rem; /* совпадает с .profile-name */
+  font-weight: 700;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* начальные повороты для лиц */
+.flip-front {
+  transform: translateX(-50%) rotateY(0deg);
+  color: #ffe0fa; /* светлый розовый вместо голубого */
+  text-shadow: 0 0 12px rgba(255,79,163,0.35);
+  z-index: 2;
+  position: relative;
+}
+
+.flip-back {
+  transform: translateX(-50%) rotateY(180deg);
+  color: #ffdff6; /* чуть светлее тыльная сторона */
+  background: linear-gradient(180deg, rgba(255,79,163,0.03), rgba(255,79,163,0.01));
+  padding: 0;
+  z-index: 1;
+}
+
+/* состояние перевёрнуто */
+.flip-root.flipped .flip-inner { transform: rotateY(-180deg); }
+
+/* чуть больше отступа между аватаром и именем, чтобы ничего не перекрывало */
+.profile-picture { margin-bottom: 20px; z-index:5; }
+.profile-name { margin-top: 8px; }
+
+/* responsive */
+@media (max-width:480px){
+  .flip-face{ font-size:1.6rem; }
+}
+
+/* larger screens: keep original sizes */
+@media (min-width: 720px) {
+  .container { max-width: 720px; padding: 40px 32px; }
+  .profile-picture img { width: 120px; height: 120px; }
+  .profile-name { font-size: 2.2rem; }
+  .flip-face { font-size: 2.2rem; }
+  .profile-bio { font-size: 1.05rem; padding: 16px 14px; }
+  .profile-buttons .profile-btn { min-width: 220px; }
+}
+
+/* ensure content not clipped when keyboard opens on mobile */
+html, body { -webkit-text-size-adjust: 100%; }
+
+/* touch improvements */
+.profile-btn { -webkit-tap-highlight-color: rgba(0,0,0,0); }
